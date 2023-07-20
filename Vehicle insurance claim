@@ -1,0 +1,60 @@
+package Application;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Vechicleinsuranceclaim {
+
+	public static void main(String[] args) throws InterruptedException {
+	
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\potti\\Downloads\\chromedriver_win32\\chromedriver.exe");
+WebDriver driver = new ChromeDriver();
+driver.manage().window().maximize();
+driver.get("http://www.sparkstone.co.nz/sampleapp/101/");
+driver.findElement(By.xpath("//*[@id=\"nav_automobile\"]")).click();
+driver.findElement(By.xpath("//*[@id=\"make\"]")).sendKeys("TOyoto");
+driver.findElement(By.xpath("//*[@id=\"engineperformance\"]")).sendKeys("150");
+driver.findElement(By.xpath("//*[@id=\"dateofmanufacture\"]")).sendKeys("01/01/2000");
+driver.findElement(By.xpath("//*[@id=\"numberofseats\"]")).sendKeys("5");
+driver.findElement(By.xpath("//*[@id=\"fuel\"]")).sendKeys("Diesel");
+driver.findElement(By.xpath("//*[@id=\"listprice\"]")).sendKeys("11863"); 
+driver.findElement(By.xpath("//*[@id=\"licenseplatenumber\"]")).sendKeys("KA09L1157");
+driver.findElement(By.xpath("//*[@id=\"annualmileage\"]")).sendKeys("522");
+driver.findElement(By.xpath("//*[@id=\"nextenterinsurantdata\"]")).click();
+driver.findElement(By.xpath("//*[@id=\"firstname\"]")).sendKeys("Srinath");
+driver.findElement(By.xpath("//*[@id=\"lastname\"]")).sendKeys("Sidhu");
+driver.findElement(By.xpath("//*[@id=\"birthdate\"]")).sendKeys("06/07/2001");
+driver.findElement(By.xpath("//span[@class='ideal-radio']")).click();
+driver.findElement(By.xpath("//*[@id=\"streetaddress\"]")).sendKeys("Bengaluru City in Karnataka");
+driver.findElement(By.xpath("//*[@id=\"country\"]")).sendKeys("india");
+driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("560037");
+driver.findElement(By.xpath("//*[@id=\"city\"]")).sendKeys("Bangaluru");
+driver.findElement(By.xpath("//*[@id=\"occupation\"]")).sendKeys("Unemployed");
+driver.findElement(By.xpath("//span[@class='ideal-check']")).click();
+driver.findElement(By.xpath("//*[@id=\"website\"]")).sendKeys("http://www.sparkstone.co.nz/sampleapp/101/");
+driver.findElement(By.xpath("//*[@id=\"nextenterproductdata\"]")).click();
+driver.findElement(By.xpath("//*[@id=\"startdate\"]")).sendKeys("01/01/2052");
+driver.findElement(By.xpath("//*[@id=\"insurancesum\"]")).sendKeys("5.000.000,00");
+driver.findElement(By.xpath("//*[@id=\"meritrating\"]")).sendKeys("Bonus 6");
+driver.findElement(By.xpath("//*[@id=\"damageinsurance\"]")).sendKeys("Full Coverage");
+Thread.sleep(2000);
+driver.findElement(By.xpath("(//span[@class='ideal-check'])[5]")).click();
+Thread.sleep(2000);
+driver.findElement(By .xpath("//*[@id=\"courtesycar\"]")).sendKeys("yes");
+driver.findElement(By.xpath("//*[@id=\"nextselectpriceoption\"]")).click();
+driver.findElement(By.xpath("//*[@id=\"priceTable\"]/tfoot/tr/th[2]/label[4]/span")).click();
+driver.findElement(By.xpath("//*[@id=\"nextsendquote\"]")).click();
+Thread.sleep(2000);
+driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("alt.t7-ewh6fqi@yopmail.com");
+driver.findElement(By.xpath("//*[@id=\"phone\"]")).sendKeys("2656565166");
+driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("sidhu");
+driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("@ABcd1");
+driver.findElement(By.xpath("//*[@id=\"confirmpassword\"]")).sendKeys("@ABcd1");
+driver.findElement(By.xpath("//*[@id=\"sendemail\"]")).click();
+
+
+	}
+
+}
